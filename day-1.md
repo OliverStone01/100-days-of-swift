@@ -1,4 +1,4 @@
-📱 Day 2
+## 📱 Day 1
 
 tutorials to follow:
 - How to create variables and constants
