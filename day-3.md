@@ -464,9 +464,231 @@ Answer = False
 
 ### How to use sets and fast data lookup
 
-The third method for storing data is called a `set`. 
+The third method for storing data is called a `set`. Sets are very similar to arrays, except you cannot add duplicate items, and they don't store items in a particular order.
+
+To create a set, all you need to do is tell Swift what type of data you want to store inside of the set. You can also add data to a set and Swift will automaticaly configure this for you:
+```
+let people = Set(["Denzel Washington", "Tom Cruise"])
+```
+
+To print the set, you can do
+```
+print(people)
+```
+
+When adding data individually, you can do the following:
+```
+var people Set<String>()
+people.insert("Denzel Washington")
+```
+The benifit of using sets is the search time. Not only is this beccause there are not mulitples of the same data. But sets are much easier for Swift to search. For example, a array with a million peices of data would take minutes to run but a set with the same amount of data would be amost instant.
 
 
+### Sets Test
+
+**q1.** This will create a set with two items – true or false?
+
+Code:
+```
+var readings = Set([true, false, true, true])
+```
+
+Answer = True
 
 
+**q2.** This will create a set with two items – true or false?
 
+Code:
+```
+var attendees = Set([100, 100, 101, 100])
+```
+
+Answer = True
+
+
+**q3.** This will create a set with two items – true or false?
+
+Code:
+```
+let users = ["Taylor", "Adele"]
+```
+
+Answer = False
+
+
+**q4.** This will create a set with two items – true or false?
+
+Code:
+```
+let earthquakeStrengths = Set(1, 1, 2, 2)
+```
+
+Answer = False
+
+
+**q5.** This will create a set with two items – true or false?
+
+Code:
+```
+let cats = ["Burmese", "Siamese", "Persian"]
+```
+
+Answer = False
+
+
+**q6.** This will create a set with two items – true or false?
+
+Code:
+```
+var names = Set(["Sean", "Paul"])
+```
+
+Answer = True
+
+
+**q7.** This will create a set with two items – true or false?
+
+Code:
+```
+var colors = Set(["Red", "Green", "Red"])
+```
+
+Answer = True
+
+
+**q8.** This will create a set with two items – true or false?
+
+Code:
+```
+let staffReviews = Set([1, 2, 1, 2, 3])
+```
+
+Answer = False
+
+
+**q9.** This will create a set with two items – true or false?
+
+Code:
+```
+var ratings = Set([1, 1, 1, 2, 2, 2])
+```
+
+Answer = True
+
+
+**q10.** This will create a set with two items – true or false?
+
+Code:
+```
+let playlistSizes = Set([1000])
+```
+
+Answer = False
+
+
+**q11.** This will create a set with two items – true or false?
+
+Code:
+```
+var scores = Set([9, 10])
+```
+
+Answer = True
+
+
+**q12.** This will create a set with two items – true or false?
+
+Code:
+```
+var scores = Set([9, 10])
+```
+
+Answer = False
+
+
+-----
+
+### How to create and use enums
+
+`enum`, short for enumeration. Is a set of named values we can create and use in our code. This allows us to remove the error for typos when we are constantly using the same code.
+
+For example, you are programming a game and the player can move in 4 directions, north, east, south, west. Instead of needing to write `character move in this direction` each time and running the risk of spelling errors. What you can do is create an enum like this:
+```
+enum Direction {
+  case north
+  case east
+  case south
+  case west
+}
+```
+
+Now, all you need to do is:
+```
+currentDirection = Direction.west
+```
+
+You can also do:
+```
+var currentDirection = Direction.north
+currentDirection = .east
+currentDirection = .south
+```
+
+When you are setting multiple values under one enum, you don't need to use `case` everytime:
+```
+enum Direction {
+  case north, east, south, west
+}
+```
+
+
+### Enumerations Test
+
+**q1.** Which of these are best stored as enums?
+
+option 1: Directions (north, south, etc).
+option 2: Heights of objects.
+
+Answer: option 1
+
+
+**q2.** Which of these are best stored as enums?
+
+option 1: A list of cities you have visited.
+option 2: Error types.
+
+Answer: option 2
+
+
+**q3.** Which of these are best stored as enums?
+
+option 1: Genres of movies.
+option 2: An email address.
+
+Answer: option 1
+
+
+**q4.** Which of these are best stored as enums?
+
+option 1: Average student exam scores.
+option 2: Suits in a deck of cards.
+
+Answer: option 2
+
+
+**q5.** Which of these are best stored as enums?
+
+option 1: Months of the year.
+option 2: Passwords.
+
+Answer: option 1
+
+
+**q6.** Which of these are best stored as enums?
+
+option 1: Days of the week.
+option 2: Usernames.
+
+Answer: option 1
+
+-----
